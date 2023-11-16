@@ -2,7 +2,7 @@
 
 This repo contains my undergoing project for a website that uses AI to describe song lyric meanings.
 
-This project uses Next 13 and MUI components. It uses genius API for song lyrics and will use chat GPT for AI interpretation.
+This project uses Next 13 and MUI v5 components. It uses genius API for song lyrics and will use chat GPT for AI interpretation.
 
 ## How to run locally
 
