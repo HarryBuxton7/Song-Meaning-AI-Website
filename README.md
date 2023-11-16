@@ -1,45 +1,17 @@
-# Material UI - Next.js App Router example in TypeScript
+# Song Meaning AI Website
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped using [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with Material UI installed.
+This repo contains an undergoing project for a website that uses AI to describe song lyric meanings.
 
-## How to use
+This project uses Next 13 and MUI components. It uses genius API for song lyrics and will use chat GPT for AI interpretation.
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+## How to run locally
 
-<!-- #default-branch-switch -->
+>cd src or app folder
 
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/material-ui-nextjs-ts
-cd material-ui-nextjs-ts
-```
+>npm run dev
 
-Install it and run:
+>use JSON provided as example data from API calls.
 
-```bash
-npm install
-npm run dev
-```
+API calls cost money so the project is currently using sample JSON data. If you want to add your own key for the GENIUS api you can get it atr https://rapidapi.com/Glavier/api/genius-song-lyrics1/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-or:
-
-<!-- #default-branch-switch -->
-
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-nextjs-ts)
-
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/material-ui-nextjs-ts)
-
-## Learn more
-
-To learn more about this example:
-
-- [Next.js documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Customizing Material UI](https://mui.com/material-ui/customization/how-to-customize/) - approaches to customizing Material UI.
-
-## What's next?
-
-<!-- #default-branch-switch -->
-
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
