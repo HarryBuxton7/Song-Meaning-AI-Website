@@ -1,0 +1,53 @@
+{
+    "lyrics": {
+      "_type": "lyrics",
+      "api_path": "/songs/67703/lyrics",
+      "lyrics": {
+        "body": {
+          "html": "<p>[Verse 1]<br>\n<a href=\"/1541089/Mazzy-star-fade-into-you/I-wanna-hold-the-hand-inside-you\" data-id=\"1541089\" class=\"has_comments\" data-editorial-state=\"accepted\" data-classification=\"accepted\">I wanna hold the hand inside you</a><br>\n<a href=\"/29810162/Mazzy-star-fade-into-you/I-wanna-take-the-breath-thats-true\" data-id=\"29810162\" data-editorial-state=\"accepted\" data-classification=\"accepted\">I wanna take the breath that's true</a><br>\n<a href=\"/29810177/Mazzy-star-fade-into-you/I-look-to-you-and-i-see-nothing-i-look-to-you-to-see-the-truth\" data-id=\"29810177\" data-editorial-state=\"accepted\" data-classification=\"accepted\">I look to you and I see nothing<br>\nI look to you to see the truth</a><br>\nYou live your life, you go in shadows<br>\nYou'll come apart and you'll go blind<br>\nSome kind of night into your darkness<br>\n<a href=\"/29810206/Mazzy-star-fade-into-you/Colored-your-eyes-with-whats-not-there\" data-id=\"29810206\" data-editorial-state=\"pending\" data-classification=\"unreviewed\">Colored your eyes with what's not there</a><br>\n<br>\n[Chorus]<br>\n<a href=\"/627240/Mazzy-star-fade-into-you/Fade-into-you\" data-id=\"627240\" class=\"has_comments\" data-editorial-state=\"accepted\" data-classification=\"accepted\">Fade into you</a><br>\nStrange you never knew<br>\n<a href=\"/627240/Mazzy-star-fade-into-you/Fade-into-you\" data-id=\"627240\" class=\"has_comments\" data-editorial-state=\"accepted\" data-classification=\"accepted\">Fade into you</a><br>\nI think it's strange you never knew<br>\n<br>\n[Guitar Solo]<br>\n<br>\n[Verse 2]<br>\n<a href=\"/30003768/Mazzy-star-fade-into-you/A-strangers-light-comes-on-slowly-a-strangers-heart-without-a-home\" data-id=\"30003768\" data-editorial-state=\"accepted\" data-classification=\"accepted\">A stranger's light comes on slowly<br>\nA stranger's heart without a home</a><br>\n<a href=\"/30003807/Mazzy-star-fade-into-you/You-put-your-hands-into-your-head-and-then-its-smiles-cover-your-heart\" data-id=\"30003807\" data-editorial-state=\"accepted\" data-classification=\"accepted\">You put your hands into your head<br>\nAnd then its smiles cover your heart</a><br>\n<br>\n[Chorus]<br>\n<a href=\"/627240/Mazzy-star-fade-into-you/Fade-into-you\" data-id=\"627240\" class=\"has_comments\" data-editorial-state=\"accepted\" data-classification=\"accepted\">Fade into you</a><br>\nStrange you never knew<br>\n<a href=\"/627240/Mazzy-star-fade-into-you/Fade-into-you\" data-id=\"627240\" class=\"has_comments\" data-editorial-state=\"accepted\" data-classification=\"accepted\">Fade into you</a><br>\nI think it's strange you never knew<br>\n<a href=\"/627240/Mazzy-star-fade-into-you/Fade-into-you\" data-id=\"627240\" class=\"has_comments\" data-editorial-state=\"accepted\" data-classification=\"accepted\">Fade into you</a><br>\nStrange you never knew<br>\n<a href=\"/627240/Mazzy-star-fade-into-you/Fade-into-you\" data-id=\"627240\" class=\"has_comments\" data-editorial-state=\"accepted\" data-classification=\"accepted\">Fade into you</a><br>\nI think it's strange you never knew<br>\n<br>\n[Outro]<br>\nI think it's strange you never knew</p>\n\n"
+        }
+      },
+      "path": "/Mazzy-star-fade-into-you-lyrics",
+      "song_id": 67703,
+      "tracking_data": {
+        "song_id": 67703,
+        "title": "Fade Into You",
+        "primary_artist": "Mazzy Star",
+        "primary_artist_id": 18099,
+        "primary_album": "So Tonight That I Might See",
+        "primary_album_id": 15359,
+        "tag": "rock",
+        "primary_tag": "rock",
+        "primary_tag_id": 567,
+        "music?": true,
+        "annotatable_type": "Song",
+        "annotatable_id": 67703,
+        "featured_video": true,
+        "cohort_ids": [],
+        "has_verified_callout": false,
+        "has_featured_annotation": true,
+        "created_at": "2012-03-07T00:53:22Z",
+        "created_month": "2012-03-01",
+        "created_year": 2012,
+        "song_tier": "D",
+        "has_recirculated_articles": false,
+        "lyrics_language": "en",
+        "has_apple_match": true,
+        "release_date": "1994-04-12",
+        "nrm_tier": 3,
+        "nrm_target_date": "2023-08-25",
+        "has_description": true,
+        "has_youtube_url": true,
+        "has_translation_q&a": false,
+        "comment_count": 34,
+        "hot": false,
+        "has_recommendations": true,
+        "has_stubhub_artist": true,
+        "has_stubhub_link": false,
+        "translation": false,
+        "recommendation_strategy": "mixpanel",
+        "web_interstitial_variant": "control",
+        "platform_variant": "desktop_react"
+      }
+    }
+  }
