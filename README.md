@@ -7,7 +7,9 @@ This project uses Next 13 and MUI v5 components. It uses genius API for song lyr
 ## How to run locally
 
 >npm install
+
 >cd src
+
 >npm run dev
 
 
