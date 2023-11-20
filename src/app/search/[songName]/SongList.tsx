@@ -10,11 +10,13 @@ export function SongList({
   songTitle,
   artistName,
   artistSlug,
+  songId
 }: {
   songUrl: string;
   songTitle: string;
   artistName: string;
   artistSlug: string;
+  songId: string;
 }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -25,7 +27,7 @@ export function SongList({
       onClick={() => {
         setLoading(true)
         const songNameAndArtistName = songTitle.replace(/ /g, '-') + '-' + artistSlug;
-        router.push(`/${songNameAndArtistName}`)
+        router.push(`/${songNameAndArtistName}-${songId}`)
       }}
     >
       {loading ? <CircularProgress size={90}/> : <Image src={songUrl} alt={songTitle} width={90} height={90}/>}

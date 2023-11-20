@@ -32,6 +32,7 @@ export default async function SearchPage({
                 songTitle={song.result.title}
                 artistName={song.result.primary_artist.name}
                 artistSlug={song.result.primary_artist.slug}
+                songId={song.result.id}
               />
             ))}
           </List>

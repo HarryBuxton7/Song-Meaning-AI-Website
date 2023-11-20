@@ -17,7 +17,7 @@ export async function searchSong(formData: FormData) {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '0bd4a892f6msh6810b9e73168e6ep1190c7jsnae4ef1e5d2f0',
+        'X-RapidAPI-Key': `${process.env.API_KEY}`,
         'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
       }
     };

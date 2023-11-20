@@ -6,7 +6,7 @@ export async function getSongList(songName: string) {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "9c0db058c0msha961f9827bfcf90p1d445cjsn2106e68543e9",
+      "X-RapidAPI-Key": `${process.env.API_KEY}`,
       "X-RapidAPI-Host": "genius-song-lyrics1.p.rapidapi.com",
     },
   };
