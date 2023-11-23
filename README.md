@@ -5,12 +5,14 @@ This repo contains my undergoing project for a website that uses AI to describe 
 This project uses Next 13 and MUI v5 components. It uses genius API for song lyrics and will use chat GPT for AI interpretation.
 
 ## How to run locally
+>add env file with RapidAPI key for genius
 
 >npm install
 
 >cd src
 
 >npm run dev
+
 
 
 >use JSON provided as example data from API calls in the getSongList and getSongLyrics functions.
