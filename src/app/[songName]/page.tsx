@@ -32,8 +32,8 @@ export default async function SongPage({
           height={300}
         />
         <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
-          <Typography variant="h3">Fade Into You</Typography>
-          <Typography variant="h4">By Mazzy Star</Typography>
+          <Typography variant="h3">{songInformation.song.title}</Typography>
+          <Typography variant="h4">By {songInformation.song.artist_names}</Typography>
         </Box>
       </Box>
       <Box sx={{ display: "flex", flexDirection: "row", mt: 10}}>
