@@ -3,6 +3,7 @@ import { List } from "@mui/material";
 import { SongList } from "./SongList";
 import Box from "@mui/material/Box";
 import Input from "./Input";
+import { searchSong } from "@/actions/searchSong";
 
 export default async function SearchPage({
   params,
@@ -17,7 +18,7 @@ export default async function SearchPage({
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
         <Box sx={{ height: "10vh" }} />
-        <form>
+        <form action={searchSong}>
           <Input songName={params.songName.replace(/-/g, " ")} />
         </form>
 
