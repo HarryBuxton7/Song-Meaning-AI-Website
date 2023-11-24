@@ -6,6 +6,8 @@ import Box from "@mui/material/Box";
 import Highlight from "./Highlight";
 import Image from "next/image";
 import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
 
 export default async function SongPage({
   params,
@@ -30,11 +32,11 @@ export default async function SongPage({
           height={300}
         />
         <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
-          <Typography variant="h3"></Typography>
+          <Typography variant="h3">Fade Into You</Typography>
           <Typography variant="h4">By Mazzy Star</Typography>
         </Box>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "row" }}>
+      <Box sx={{ display: "flex", flexDirection: "row", mt: 10}}>
         <Typography
           sx={{ whiteSpace: "pre-wrap", mt: 5 }}
           variant="body1"
@@ -42,8 +44,11 @@ export default async function SongPage({
         >
           {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}
         </Typography>
-        <Paper elevation={1}>
-          <Typography variant="h3">Song Meaning:</Typography>
+        <Paper elevation={1} sx={{ p: 5, borderRadius: "32px" }}>
+          <Typography variant="h4" sx={{pb: 2}}>Song Meaning Analysis:</Typography>
+          <Button variant="contained" endIcon={<SendIcon />}>
+            Generate Analysis
+          </Button>
         </Paper>
       </Box>
       <Highlight />
