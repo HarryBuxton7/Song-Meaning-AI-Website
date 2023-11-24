@@ -1,9 +1,9 @@
-import jsonData from "./songLyrics.json";
+import jsonData from "./songInformation.json";
 
-export async function getSongLyrics(songId: string) {
-  return jsonData.lyrics.lyrics.body.html;
+export async function getSongInformation(songId: string) {
+  return jsonData
 
-  const url = `https://genius-song-lyrics1.p.rapidapi.com/song/lyrics/?id=${songId}}`;
+  const url = `https://genius-song-lyrics1.p.rapidapi.com/song/details/?id=${songId}`;
   const options = {
     method: "GET",
     headers: {
@@ -15,7 +15,7 @@ export async function getSongLyrics(songId: string) {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    return result.lyrics.lyrics.body.html;
+    return result
   } catch (error) {
     console.error(error);
   }

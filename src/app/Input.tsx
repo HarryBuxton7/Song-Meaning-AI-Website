@@ -19,6 +19,7 @@ export default function Input() {
         id="outlined-basic"
         label="Search for a song"
         variant="outlined"
+        autoComplete="off"
         sx={{ maxWidth: "100%" }}
         InputProps={{
           endAdornment: (
