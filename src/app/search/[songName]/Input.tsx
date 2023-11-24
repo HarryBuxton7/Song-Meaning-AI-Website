@@ -18,9 +18,9 @@ export default function Input(songName: {songName: string}) {
         name="songName"
         id="outlined-basic"
         label="Search for a song"
-        variant="outlined"
+        variant="filled"
         autoComplete="off"
-        sx={{ maxWidth: "100%" }}
+        sx={{width: "145%"}}
         defaultValue = {songName.songName}
         InputProps={{
           endAdornment: (
