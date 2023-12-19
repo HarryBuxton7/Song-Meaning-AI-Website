@@ -7,10 +7,10 @@ export default function GenerateButton(){
 
     return(
         <Button
-        sx={{ maxWidth: "100%" }}
+        sx={{ maxWidth: "100%", maxHeight: "100%" }}
         type="submit"
         variant="contained"
-        endIcon={pending ? <CircularProgress sx={{color: "black"}} size={30} /> : <SendIcon />}
+        endIcon={pending ? <CircularProgress sx={{color: "black"}} size={20}/> : <SendIcon sx={{width: "100%"}}/>}
       >
         Generate Analysis
       </Button>

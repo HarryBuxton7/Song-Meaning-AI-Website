@@ -1,7 +1,6 @@
 import { getSongLyrics } from "./getSongLyrics";
 import { getSongInformation } from "./getSongInformation";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import Highlight from "./Highlight";
 import Image from "next/image";
 import SongAnalysisPaper from "./songAnalysisPaper";
@@ -62,11 +61,12 @@ export default async function SongPage({
             sx={{ whiteSpace: "pre-wrap", mt: 5 }}
             variant="body1"
             gutterBottom
+
           >
             {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}
           </Typography>
         </Grid>
-        <Grid item md={6.5} xs={12}>
+        <Grid item md={6.5} xs={12} sx={{mt: 5}}>
           <SongAnalysisPaper
             lyrics={songLyrics
               .replace(/<[^>]+(?!br)>/g, "")

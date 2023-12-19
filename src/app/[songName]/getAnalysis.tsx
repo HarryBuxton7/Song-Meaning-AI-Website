@@ -19,6 +19,7 @@ export async function generateAnalysis(prevState: any, formData: FormData) {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
+    console.log(result)
     return result.choices[0].message.content
   } catch (error) {
     console.error(error);
