@@ -2,7 +2,9 @@
 
 This repo contains my undergoing project for a website that uses AI to describe song lyric meanings. Website is deployed on Vercel.
 
-This project uses Next 13 and MUI v5 components. It uses genius API for song lyrics and will use chat GPT for AI interpretation.
+This project uses Next 13 and MUI v5 components. It uses genius API for song lyrics and uses chat GPT for AI interpretation.
+
+See the development branch for most recent updates.
 
 ## How to run locally
 >add env file with RapidAPI key for genius
