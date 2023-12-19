@@ -8,6 +8,8 @@ import Image from "next/image";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
+import { generateAnalysis } from "./getAnalysis";
+import Input from "./input";
 
 export default async function SongPage({
   params,
@@ -33,10 +35,12 @@ export default async function SongPage({
         />
         <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
           <Typography variant="h3">{songInformation.song.title}</Typography>
-          <Typography variant="h4">By {songInformation.song.artist_names}</Typography>
+          <Typography variant="h4">
+            By {songInformation.song.artist_names}
+          </Typography>
         </Box>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "row", mt: 10}}>
+      <Box sx={{ display: "flex", flexDirection: "row", mt: 10 }}>
         <Typography
           sx={{ whiteSpace: "pre-wrap", mt: 5 }}
           variant="body1"
@@ -45,10 +49,12 @@ export default async function SongPage({
           {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}
         </Typography>
         <Paper elevation={1} sx={{ p: 5, borderRadius: "32px" }}>
-          <Typography variant="h4" sx={{pb: 2}}>Song Meaning Analysis:</Typography>
-          <Button variant="contained" endIcon={<SendIcon />}>
-            Generate Analysis
-          </Button>
+          <Typography variant="h4" sx={{ pb: 2 }}>
+            Song Meaning Analysis:
+          </Typography>
+          <form action={generateAnalysis}>
+            <Input lyrics = {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}/>
+          </form>
         </Paper>
       </Box>
       <Highlight />

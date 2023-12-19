@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Input from "../app/Input";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { searchSong } from "../actions/searchSong";
+import { searchSong } from "./searchSong";
 
 export default function HomePage() {
   return (

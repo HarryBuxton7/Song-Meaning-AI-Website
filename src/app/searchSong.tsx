@@ -2,6 +2,7 @@
 import { redirect } from "next/navigation";
 
 export async function searchSong(formData: FormData) {
+  console.log("searching")
   const songName = formData.get("songName");
 
   if (typeof songName !== "string") {
