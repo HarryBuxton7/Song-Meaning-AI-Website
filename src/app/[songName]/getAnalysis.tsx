@@ -1,6 +1,7 @@
 "use server";
 
 export async function generateAnalysis(prevState: any, formData: FormData) {
+  console.log(formData.get("lyrics"))
   const url = `https://api.openai.com/v1/chat/completions`;
   const options = {
     method: 'POST',

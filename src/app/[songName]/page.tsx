@@ -21,6 +21,7 @@ export default async function SongPage({
 
   return (
     <Container
+      maxWidth="xl"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -31,27 +32,32 @@ export default async function SongPage({
     >
       <Grid
         container
-        spacing={2}
+        spacing={5}
         direction="row"
         justifyContent="flex-start"
         alignItems="flex-start"
-        sx={{width: "80%"}}
+        sx={{ width: "85%" }}
       >
-        <Grid item xs={4} sx={{display: "flex", justifyContent:"flex-end"}}>
+        <Grid item md={5} xs = {12} sx={{ display: "flex", justifyContent: "center" }}>
           <Image
             src={songImageUrl}
             alt={songInformation.song.title}
-            width={300}
-            height={300}
+            width={275}
+            height={275}
           />
         </Grid>
-        <Grid item xs={8}>
-          <Typography variant="h3">{songInformation.song.title}</Typography>
-          <Typography variant="h4">
+        <Grid item md={7} xs={12}  sx={{ display: "flex", flexDirection: "column", alignItems: {md: "flex-start", xs: "center"} }}>
+          <Typography sx={{ typography: { md: 'h3', xs: 'h4' } }}>{songInformation.song.title}</Typography>
+          <Typography sx={{ typography: { md: 'h5', xs: 'h6' } }}>
             By {songInformation.song.artist_names}
           </Typography>
         </Grid>
-        <Grid item xs={5}>
+        <Grid
+          item
+          md={5}
+          xs={12}
+          sx={{ display: "flex", justifyContent: "center" }}
+        >
           <Typography
             sx={{ whiteSpace: "pre-wrap", mt: 5 }}
             variant="body1"
@@ -60,7 +66,7 @@ export default async function SongPage({
             {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}
           </Typography>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item md={6.5} xs={12}>
           <SongAnalysisPaper
             lyrics={songLyrics
               .replace(/<[^>]+(?!br)>/g, "")

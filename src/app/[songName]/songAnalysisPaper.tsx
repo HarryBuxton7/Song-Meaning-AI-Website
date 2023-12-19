@@ -13,9 +13,10 @@ export default function SongAnalysisPaper(lyrics: { lyrics: string }) {
 
   const [state, formAction] = useFormState(generateAnalysis, lyrics.lyrics);
 
+  
   return (
     <>
-      <Paper elevation={1} sx={{ p: 5, borderRadius: "32px", maxWidth: 500 }}>
+      <Paper elevation={1} sx={{ p: 4, borderRadius: "32px", maxWidth: "100%" }}>
         <Typography variant="h4" sx={{ pb: 2 }}>
           Song Meaning Analysis:
         </Typography>
@@ -23,7 +24,14 @@ export default function SongAnalysisPaper(lyrics: { lyrics: string }) {
           <input type="hidden" name="lyrics" value={lyrics.lyrics} />
           <GenerateButton />
         </form>
+        <br></br>
+        <Typography
+            sx={{ whiteSpace: "pre-wrap"}}
+            variant="body1"
+            gutterBottom
+          >
         {state !== lyrics.lyrics && state}
+          </Typography>
       </Paper>
     </>
   );
