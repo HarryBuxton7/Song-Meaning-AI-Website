@@ -1,7 +1,6 @@
 import jsonData from "./songInformation.json";
 
 export async function getSongInformation(songId: string) {
-  console.log("here")
   return jsonData
 
   const url = `https://genius-song-lyrics1.p.rapidapi.com/song/details/?id=${songId}`;

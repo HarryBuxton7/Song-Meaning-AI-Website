@@ -1,15 +1,11 @@
 import { getSongLyrics } from "./getSongLyrics";
-import { getSongList } from "../search/[songName]/getSongList";
 import { getSongInformation } from "./getSongInformation";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Highlight from "./Highlight";
 import Image from "next/image";
-import Paper from "@mui/material/Paper";
-import Button from "@mui/material/Button";
-import SendIcon from "@mui/icons-material/Send";
-import { generateAnalysis } from "./getAnalysis";
-import Input from "./input";
+import SongAnalysisPaper from "./songAnalysisPaper";
+
 
 export default async function SongPage({
   params,
@@ -21,6 +17,8 @@ export default async function SongPage({
   const songLyrics = await getSongLyrics(searchParams.id);
   const songInformation = await getSongInformation(searchParams.id);
   const songImageUrl = songInformation.song.song_art_image_thumbnail_url;
+
+
 
   return (
     <Box
@@ -48,14 +46,7 @@ export default async function SongPage({
         >
           {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}
         </Typography>
-        <Paper elevation={1} sx={{ p: 5, borderRadius: "32px" }}>
-          <Typography variant="h4" sx={{ pb: 2 }}>
-            Song Meaning Analysis:
-          </Typography>
-          <form action={generateAnalysis}>
-            <Input lyrics = {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}/>
-          </form>
-        </Paper>
+        <SongAnalysisPaper lyrics={songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")} />
       </Box>
       <Highlight />
     </Box>
