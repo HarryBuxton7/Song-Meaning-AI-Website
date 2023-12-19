@@ -10,7 +10,7 @@ export async function generateAnalysis(prevState: any, formData: FormData) {
     },
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: `Can you break down the meaning of these song lyrics in 200 words: ${formData.get("lyrics")}` }],
+      messages: [{ role: 'user', content: `Can you break down the meaning of these song lyrics in 150 words: ${formData.get("lyrics")}` }],
       temperature: 0.7
     })
   };
