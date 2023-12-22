@@ -3,7 +3,7 @@ import { List } from "@mui/material";
 import { SongList } from "./SongList";
 import Box from "@mui/material/Box";
 import Input from "./Input";
-import { searchSong } from "@/actions/searchSong";
+import { searchSong } from "@/app/searchSong";
 
 export default async function SearchPage({
   params,

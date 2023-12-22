@@ -1,13 +1,11 @@
 import { getSongLyrics } from "./getSongLyrics";
-import { getSongList } from "../search/[songName]/getSongList";
 import { getSongInformation } from "./getSongInformation";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import Highlight from "./Highlight";
 import Image from "next/image";
-import Paper from "@mui/material/Paper";
-import Button from "@mui/material/Button";
-import SendIcon from "@mui/icons-material/Send";
+import SongAnalysisPaper from "./songAnalysisPaper";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
 export default async function SongPage({
   params,
@@ -21,37 +19,62 @@ export default async function SongPage({
   const songImageUrl = songInformation.song.song_art_image_thumbnail_url;
 
   return (
-    <Box
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    <Container
+      maxWidth="xl"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        mt: 5,
+      }}
     >
-      <Box sx={{ display: "flex", flexDirection: "row", mt: 5 }}>
-        <Image
-          src={songImageUrl}
-          alt={songInformation.song.title}
-          width={300}
-          height={300}
-        />
-        <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
-          <Typography variant="h3">{songInformation.song.title}</Typography>
-          <Typography variant="h4">By {songInformation.song.artist_names}</Typography>
-        </Box>
-      </Box>
-      <Box sx={{ display: "flex", flexDirection: "row", mt: 10}}>
-        <Typography
-          sx={{ whiteSpace: "pre-wrap", mt: 5 }}
-          variant="body1"
-          gutterBottom
+      <Grid
+        container
+        spacing={5}
+        direction="row"
+        justifyContent="flex-start"
+        alignItems="flex-start"
+        sx={{ width: "85%" }}
+      >
+        <Grid item md={5} xs = {12} sx={{ display: "flex", justifyContent: "center" }}>
+          <Image
+            src={songImageUrl}
+            alt={songInformation.song.title}
+            width={275}
+            height={275}
+          />
+        </Grid>
+        <Grid item md={7} xs={12}  sx={{ display: "flex", flexDirection: "column", alignItems: {md: "flex-start", xs: "center"} }}>
+          <Typography sx={{ typography: { md: 'h3', xs: 'h4' } }}>{songInformation.song.title}</Typography>
+          <Typography sx={{ typography: { md: 'h5', xs: 'h6' } }}>
+            By {songInformation.song.artist_names}
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          md={5}
+          xs={12}
+          sx={{ display: "flex", justifyContent: "center" }}
         >
-          {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}
-        </Typography>
-        <Paper elevation={1} sx={{ p: 5, borderRadius: "32px" }}>
-          <Typography variant="h4" sx={{pb: 2}}>Song Meaning Analysis:</Typography>
-          <Button variant="contained" endIcon={<SendIcon />}>
-            Generate Analysis
-          </Button>
-        </Paper>
-      </Box>
+          <Typography
+            sx={{ whiteSpace: "pre-wrap", mt: 5 }}
+            variant="body1"
+            gutterBottom
+
+          >
+            {songLyrics.replace(/<[^>]+(?!br)>/g, "").replace(/<br>/g, "\n")}
+          </Typography>
+        </Grid>
+        <Grid item md={6.5} xs={12} sx={{mt: 5}}>
+          <SongAnalysisPaper
+            lyrics={songLyrics
+              .replace(/<[^>]+(?!br)>/g, "")
+              .replace(/<br>/g, "\n")}
+          />
+        </Grid>
+      </Grid>
       <Highlight />
-    </Box>
+    </Container>
   );
 }
