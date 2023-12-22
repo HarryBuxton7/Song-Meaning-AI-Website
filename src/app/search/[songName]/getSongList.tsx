@@ -1,7 +1,7 @@
-import jsonData from "./songList.json";
+//import jsonData from "./songList.json";
 
 export async function getSongList(songName: string) {
-  return jsonData;
+  //return jsonData;
   const url = `https://genius-song-lyrics1.p.rapidapi.com/search/?q=${songName}&per_page=10&page=1`;
   const options = {
     method: "GET",

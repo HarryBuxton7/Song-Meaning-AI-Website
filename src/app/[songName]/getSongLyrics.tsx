@@ -1,7 +1,7 @@
-import jsonData from "./SongLyrics.json";
+//import jsonData from "./SongLyrics.json";
 
 export async function getSongLyrics(songId: string) {
-  return jsonData.lyrics.lyrics.body.html;
+  //return jsonData.lyrics.lyrics.body.html;
 
   const url = `https://genius-song-lyrics1.p.rapidapi.com/song/lyrics/?id=${songId}}`;
   const options = {
